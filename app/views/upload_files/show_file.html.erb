@@ -2,8 +2,21 @@
 <%= form_for @upload_file, method: "get" do |f| %>
   <%= text_field_tag  :filter, params[:filter], placeholder: "Enter x-path" %>
   <%= hidden_field_tag  :file_name, params[:file_name] %>
+  <lable> Filter </lable> <%= radio_button_tag :display_type, "filter" %>
+  <lable> Highlight </lable> <%= radio_button_tag :display_type, "highlight" %>
   <input type="submit"><br>
+  <%= link_to 'Back', upload_files_path %><br><br>
 <%end%>
-<% @content.each do |contant| %>
-  <%= contant %><br><br>
+
+<% if params[:display_type] != "highlight"%>
+	<% @content.each do |contant| %>
+	  <%= contant %><br><br>
+	<%end%>
+<%else%>
+
+	<% @doc.to_s.split('<'+@random_string+'/>').each_with_index do |s, i|%>
+		<% c =  i>0 ? @content[i-1] : "" %>
+		<%= s.sub!(c, "")%>
+		<div style="background-color: yellow;margin:10px"><%= @content[i] %></div>
+	<%end%>
 <%end%>
