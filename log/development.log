@@ -622,3 +622,1277 @@ Processing by UploadFilesController#new as HTML
   Rendered upload_files/_form.html.erb (174.5ms)
   Rendered upload_files/new.html.erb within layouts/application (176.1ms)
 Completed 200 OK in 199ms (Views: 197.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/upload_files" for 127.0.0.1 at 2016-10-01 12:55:03 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UploadFilesController#index as HTML
+  [1m[35mUploadFile Load (0.3ms)[0m  SELECT "upload_files".* FROM "upload_files"
+  Rendered upload_files/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 325ms (Views: 308.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/scaffolds.self-1e1be218744ffc8b17e080e8c65d69006a0323894de7049c32cd53cec1df7727.css?body=1" for 127.0.0.1 at 2016-10-01 12:55:04 +0530
+
+
+Started GET "/assets/upload_files.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-01 12:55:04 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-01 12:55:04 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-01 12:55:04 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-01 12:55:04 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-01 12:55:04 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-01 12:55:04 +0530
+
+
+Started GET "/assets/upload_files.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-01 12:55:04 +0530
+
+
+Started GET "/upload_files/1" for 127.0.0.1 at 2016-10-01 12:55:09 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUploadFile Load (0.4ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered upload_files/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 61ms (Views: 49.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/upload_files" for 127.0.0.1 at 2016-10-01 12:59:33 +0530
+Processing by UploadFilesController#index as HTML
+  [1m[35mUploadFile Load (0.4ms)[0m  SELECT "upload_files".* FROM "upload_files"
+  Rendered upload_files/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 60ms (Views: 53.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/upload_files/new" for 127.0.0.1 at 2016-10-01 12:59:36 +0530
+Processing by UploadFilesController#new as HTML
+  Rendered upload_files/_form.html.erb (27.6ms)
+  Rendered upload_files/new.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 49ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/upload_files" for 127.0.0.1 at 2016-10-01 12:59:51 +0530
+Processing by UploadFilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wMlENT7wzXS06onVeiMFghPuEoE0pniXyxDiFQUASo6OBUDdsYXaY/VCzI5dpLyLdefMCFjg3Bpi/seV3N8L8A==", "upload_file"=>{"zip_file_a"=>#<ActionDispatch::Http::UploadedFile:0x007fd80a0b7748 @tempfile=#<Tempfile:/tmp/RackMultipart20161001-32096-1f01n17.zip>, @original_filename="note.xml.zip", @content_type="application/zip", @headers="Content-Disposition: form-data; name=\"upload_file[zip_file_a]\"; filename=\"note.xml.zip\"\r\nContent-Type: application/zip\r\n">}, "commit"=>"Create Upload file"}
+Command :: file -b --mime '/tmp/2109680d74f0e6e7a50119ef7abbfef320161001-32096-1jr4cr9.zip'
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Command :: file -b --mime '/tmp/2109680d74f0e6e7a50119ef7abbfef320161001-32096-s9w57k.zip'
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "upload_files" ("zip_file_a_file_name", "zip_file_a_content_type", "zip_file_a_file_size", "zip_file_a_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["zip_file_a_file_name", "note.xml.zip"], ["zip_file_a_content_type", "application/zip"], ["zip_file_a_file_size", 298], ["zip_file_a_updated_at", "2016-10-01 07:29:51.671675"], ["created_at", "2016-10-01 07:29:51.681142"], ["updated_at", "2016-10-01 07:29:51.681142"]]
+  [1m[36m (261.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/upload_files
+Completed 302 Found in 287ms (ActiveRecord: 262.4ms)
+
+
+Started GET "/upload_files" for 127.0.0.1 at 2016-10-01 12:59:51 +0530
+Processing by UploadFilesController#index as HTML
+  [1m[35mUploadFile Load (0.2ms)[0m  SELECT "upload_files".* FROM "upload_files"
+  Rendered upload_files/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/upload_files/3" for 127.0.0.1 at 2016-10-01 12:59:53 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUploadFile Load (0.3ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered upload_files/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 28ms (Views: 23.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/upload_files/3?file_name=note.xml" for 127.0.0.1 at 2016-10-01 13:00:32 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"note.xml", "id"=>"3"}
+  [1m[35mUploadFile Load (0.2ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered upload_files/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 28ms (Views: 23.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/upload_files/3?file_name=note.xml" for 127.0.0.1 at 2016-10-01 13:03:43 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"note.xml", "id"=>"3"}
+  [1m[36mUploadFile Load (0.2ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered upload_files/show_file.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 32ms (Views: 15.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/scaffolds.self-1e1be218744ffc8b17e080e8c65d69006a0323894de7049c32cd53cec1df7727.css?body=1" for 127.0.0.1 at 2016-10-01 13:03:43 +0530
+
+
+Started GET "/assets/upload_files.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-01 13:03:43 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-01 13:03:43 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-01 13:03:43 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-01 13:03:43 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-01 13:03:43 +0530
+
+
+Started GET "/assets/upload_files.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-01 13:03:43 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-01 13:03:43 +0530
+
+
+Started GET "/upload_files/3?file_name=note.xml" for 127.0.0.1 at 2016-10-01 13:24:25 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"note.xml", "id"=>"3"}
+  [1m[35mUploadFile Load (0.2ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered upload_files/show_file.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 485ms (Views: 370.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/upload_files/" for 127.0.0.1 at 2016-10-01 13:25:30 +0530
+Processing by UploadFilesController#index as HTML
+  [1m[36mUploadFile Load (0.2ms)[0m  [1mSELECT "upload_files".* FROM "upload_files"[0m
+  Rendered upload_files/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/upload_files/new" for 127.0.0.1 at 2016-10-01 13:25:33 +0530
+Processing by UploadFilesController#new as HTML
+  Rendered upload_files/_form.html.erb (104.7ms)
+  Rendered upload_files/new.html.erb within layouts/application (132.8ms)
+Completed 200 OK in 151ms (Views: 150.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/upload_files" for 127.0.0.1 at 2016-10-01 13:25:41 +0530
+Processing by UploadFilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C7KzMsIybus2zs+TYVZKF73sSeGSwJyiUFVFv9hJJz1FfrfaTUd5/HdmishG0fMe2+WXaP6GOC/5u2A/AZZmQw==", "upload_file"=>{"zip_file_a"=>#<ActionDispatch::Http::UploadedFile:0x007f702e618a50 @tempfile=#<Tempfile:/tmp/RackMultipart20161001-32481-1l17ri.zip>, @original_filename="test.xml.zip", @content_type="application/zip", @headers="Content-Disposition: form-data; name=\"upload_file[zip_file_a]\"; filename=\"test.xml.zip\"\r\nContent-Type: application/zip\r\n">}, "commit"=>"Create Upload file"}
+Command :: file -b --mime '/tmp/49fd6ffa681c25c9e4ce498fabb5409a20161001-32481-enev58.zip'
+  [1m[35m (0.2ms)[0m  begin transaction
+Command :: file -b --mime '/tmp/49fd6ffa681c25c9e4ce498fabb5409a20161001-32481-9bajs8.zip'
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "upload_files" ("zip_file_a_file_name", "zip_file_a_content_type", "zip_file_a_file_size", "zip_file_a_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["zip_file_a_file_name", "test.xml.zip"], ["zip_file_a_content_type", "application/zip"], ["zip_file_a_file_size", 487], ["zip_file_a_updated_at", "2016-10-01 07:55:41.062082"], ["created_at", "2016-10-01 07:55:41.161733"], ["updated_at", "2016-10-01 07:55:41.161733"]]
+  [1m[35m (204.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/upload_files
+Completed 302 Found in 325ms (ActiveRecord: 205.6ms)
+
+
+Started GET "/upload_files" for 127.0.0.1 at 2016-10-01 13:25:41 +0530
+Processing by UploadFilesController#index as HTML
+  [1m[36mUploadFile Load (0.2ms)[0m  [1mSELECT "upload_files".* FROM "upload_files"[0m
+  Rendered upload_files/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 21ms (Views: 20.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/upload_files/4" for 127.0.0.1 at 2016-10-01 13:25:44 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUploadFile Load (0.1ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 34ms (Views: 30.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/upload_files/4?fine_name=test.xml" for 127.0.0.1 at 2016-10-01 13:26:09 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"fine_name"=>"test.xml", "id"=>"4"}
+  [1m[36mUploadFile Load (0.2ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered upload_files/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 38ms (Views: 25.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/upload_files/4?fine_name=test.xml" for 127.0.0.1 at 2016-10-01 13:26:40 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"fine_name"=>"test.xml", "id"=>"4"}
+  [1m[35mUploadFile Load (0.1ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 19.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/upload_files/4?file_name=test.xml" for 127.0.0.1 at 2016-10-01 13:26:53 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "id"=>"4"}
+  [1m[36mUploadFile Load (0.2ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 28.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book[1]" for 127.0.0.1 at 2016-10-01 13:27:32 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book[1]", "id"=>"4"}
+  [1m[35mUploadFile Load (0.2ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 66ms (Views: 17.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore" for 127.0.0.1 at 2016-10-01 13:29:13 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore", "id"=>"4"}
+  [1m[36mUploadFile Load (0.2ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 36ms (Views: 30.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore" for 127.0.0.1 at 2016-10-01 13:29:16 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore", "id"=>"4"}
+  [1m[35mUploadFile Load (0.2ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 29ms (Views: 25.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-1e1be218744ffc8b17e080e8c65d69006a0323894de7049c32cd53cec1df7727.css?body=1" for 127.0.0.1 at 2016-10-01 13:29:17 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-01 13:29:17 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-01 13:29:17 +0530
+
+
+Started GET "/assets/upload_files.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-01 13:29:17 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-01 13:29:17 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-01 13:29:17 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-01 13:29:17 +0530
+
+
+Started GET "/assets/upload_files.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-01 13:29:17 +0530
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore" for 127.0.0.1 at 2016-10-01 13:30:02 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore", "id"=>"4"}
+  [1m[36mUploadFile Load (0.2ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 44ms (Views: 22.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/scaffolds.self-1e1be218744ffc8b17e080e8c65d69006a0323894de7049c32cd53cec1df7727.css?body=1" for 127.0.0.1 at 2016-10-01 13:30:03 +0530
+
+
+Started GET "/assets/upload_files.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-01 13:30:03 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-01 13:30:03 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-01 13:30:03 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-01 13:30:03 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-01 13:30:03 +0530
+
+
+Started GET "/assets/upload_files.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-01 13:30:03 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-01 13:30:03 +0530
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book[1]" for 127.0.0.1 at 2016-10-01 13:30:26 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book[1]", "id"=>"4"}
+  [1m[35mUploadFile Load (0.1ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 30ms (Views: 25.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/UploadFiles" for 127.0.0.1 at 2016-10-01 13:33:34 +0530
+
+ActionController::RoutingError (No route matches [GET] "/UploadFiles"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/harry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/harry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/harry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5103.5ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (5612.0ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (534.8ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1090.5ms)
+
+
+Started GET "/upload_files" for 127.0.0.1 at 2016-10-01 13:34:06 +0530
+Processing by UploadFilesController#index as HTML
+  [1m[36mUploadFile Load (168.5ms)[0m  [1mSELECT "upload_files".* FROM "upload_files"[0m
+  Rendered upload_files/index.html.erb within layouts/application (178.4ms)
+Completed 200 OK in 4364ms (Views: 4119.6ms | ActiveRecord: 168.9ms)
+
+
+Started GET "/assets/scaffolds.self-1e1be218744ffc8b17e080e8c65d69006a0323894de7049c32cd53cec1df7727.css?body=1" for 127.0.0.1 at 2016-10-01 13:34:15 +0530
+
+
+Started GET "/assets/upload_files.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-01 13:34:15 +0530
+
+
+Started GET "/assets/upload_files.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-01 13:34:15 +0530
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book[1]" for 127.0.0.1 at 2016-10-01 13:35:05 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book[1]", "id"=>"4"}
+  [1m[35mUploadFile Load (45.6ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 813ms (Views: 287.9ms | ActiveRecord: 45.6ms)
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book[1]" for 127.0.0.1 at 2016-10-01 13:35:54 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book[1]", "id"=>"4"}
+  [1m[36mUploadFile Load (0.2ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 57ms (Views: 21.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book[1]" for 127.0.0.1 at 2016-10-01 13:36:43 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book[1]", "id"=>"4"}
+  [1m[35mUploadFile Load (0.2ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 83ms (Views: 46.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book[1]/book" for 127.0.0.1 at 2016-10-01 13:36:58 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book[1]/book", "id"=>"4"}
+  [1m[36mUploadFile Load (0.1ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book[1]/" for 127.0.0.1 at 2016-10-01 13:37:03 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book[1]/", "id"=>"4"}
+  [1m[35mUploadFile Load (0.1ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+Completed 500 Internal Server Error in 101ms (ActiveRecord: 0.1ms)
+
+Nokogiri::XML::XPath::SyntaxError (Invalid expression: /bookstore/book[1]/):
+  app/controllers/upload_files_controller.rb:24:in `block (2 levels) in show'
+  app/controllers/upload_files_controller.rb:17:in `block in show'
+  app/controllers/upload_files_controller.rb:15:in `show'
+
+
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.2ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.4ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (82.6ms)
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book[1]" for 127.0.0.1 at 2016-10-01 13:37:09 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book[1]", "id"=>"4"}
+  [1m[36mUploadFile Load (0.2ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 37ms (Views: 30.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book[1]/title" for 127.0.0.1 at 2016-10-01 13:37:27 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book[1]/title", "id"=>"4"}
+  [1m[35mUploadFile Load (0.1ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 24ms (Views: 20.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book" for 127.0.0.1 at 2016-10-01 13:39:01 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book", "id"=>"4"}
+  [1m[36mUploadFile Load (91.1ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1897ms (Views: 1245.8ms | ActiveRecord: 91.1ms)
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book" for 127.0.0.1 at 2016-10-01 13:41:11 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book", "id"=>"4"}
+  [1m[35mUploadFile Load (18.4ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 340ms (Views: 225.2ms | ActiveRecord: 30.0ms)
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book" for 127.0.0.1 at 2016-10-01 13:45:55 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book", "id"=>"4"}
+  [1m[36mUploadFile Load (0.2ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 14.4ms)
+
+ActionView::Template::Error (undefined method `each' for "":String):
+    1: <input type=text><input type=button><br>
+    2: <% @content.each do |contant| %>
+    3:   <%= contant %><br>
+    4: <%end%>
+  app/views/upload_files/show_file.html.erb:2:in `_app_views_upload_files_show_file_html_erb__3536202052940803858_70059892801700'
+  app/controllers/upload_files_controller.rb:34:in `block (2 levels) in show'
+  app/controllers/upload_files_controller.rb:17:in `block in show'
+  app/controllers/upload_files_controller.rb:15:in `show'
+
+
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.5ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.3ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.7ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (81.1ms)
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book" for 127.0.0.1 at 2016-10-01 13:46:16 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book", "id"=>"4"}
+  [1m[35mUploadFile Load (0.6ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.2ms)
+
+ActionView::Template::Error (undefined method `each' for "":String):
+    1: <input type=text><input type=button><br>
+    2: <% @content.each do |contant| %>
+    3:   <%= contant %><br>
+    4: <%end%>
+  app/views/upload_files/show_file.html.erb:2:in `_app_views_upload_files_show_file_html_erb__3536202052940803858_70059892801700'
+  app/controllers/upload_files_controller.rb:34:in `block (2 levels) in show'
+  app/controllers/upload_files_controller.rb:17:in `block in show'
+  app/controllers/upload_files_controller.rb:15:in `show'
+
+
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.8ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (21.6ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (44.9ms)
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book" for 127.0.0.1 at 2016-10-01 13:46:47 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book", "id"=>"4"}
+  [1m[36mUploadFile Load (0.3ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 218ms (Views: 204.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/scaffolds.self-1e1be218744ffc8b17e080e8c65d69006a0323894de7049c32cd53cec1df7727.css?body=1" for 127.0.0.1 at 2016-10-01 13:46:48 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-01 13:46:48 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-01 13:46:48 +0530
+
+
+Started GET "/assets/upload_files.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-01 13:46:48 +0530
+
+
+Started GET "/assets/upload_files.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-01 13:46:48 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-01 13:46:48 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-01 13:46:48 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-01 13:46:48 +0530
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book" for 127.0.0.1 at 2016-10-01 13:46:53 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book", "id"=>"4"}
+  [1m[35mUploadFile Load (0.2ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 46ms (Views: 17.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book" for 127.0.0.1 at 2016-10-01 13:47:42 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book", "id"=>"4"}
+  [1m[36mUploadFile Load (0.2ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 178ms (Views: 17.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book" for 127.0.0.1 at 2016-10-01 13:47:59 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book", "id"=>"4"}
+  [1m[35mUploadFile Load (0.2ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 30ms (Views: 24.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book" for 127.0.0.1 at 2016-10-01 14:14:21 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book", "id"=>"4"}
+  [1m[35mUploadFile Load (0.3ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 922ms (Views: 685.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book" for 127.0.0.1 at 2016-10-01 14:14:45 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book", "id"=>"4"}
+  [1m[36mUploadFile Load (0.2ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 28ms (Views: 23.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book" for 127.0.0.1 at 2016-10-01 14:14:51 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book", "id"=>"4"}
+  [1m[35mUploadFile Load (0.3ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 25.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.self-1e1be218744ffc8b17e080e8c65d69006a0323894de7049c32cd53cec1df7727.css?body=1" for 127.0.0.1 at 2016-10-01 14:14:51 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-01 14:14:51 +0530
+
+
+Started GET "/assets/upload_files.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-01 14:14:51 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-01 14:14:51 +0530
+
+
+Started GET "/assets/upload_files.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-01 14:14:51 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-01 14:14:51 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-01 14:14:51 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-01 14:14:51 +0530
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book" for 127.0.0.1 at 2016-10-01 14:15:21 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book", "id"=>"4"}
+  [1m[36mUploadFile Load (0.1ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/home/harry/railsworkspace/test_project/app/views/upload_files/show_file.html.erb:1: syntax error, unexpected tLABEL
+... form_for(@upload_file), methd: "get" do |f| @output_buffer....
+...                               ^
+/home/harry/railsworkspace/test_project/app/views/upload_files/show_file.html.erb:1: syntax error, unexpected keyword_do, expecting keyword_end
+...(@upload_file), methd: "get" do |f| @output_buffer.safe_appe...
+...                               ^
+/home/harry/railsworkspace/test_project/app/views/upload_files/show_file.html.erb:8: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/upload_files/show_file.html.erb:1: syntax error, unexpected tLABEL
+  app/views/upload_files/show_file.html.erb:1: syntax error, unexpected keyword_do, expecting keyword_end
+  app/views/upload_files/show_file.html.erb:8: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/controllers/upload_files_controller.rb:34:in `block (2 levels) in show'
+  app/controllers/upload_files_controller.rb:17:in `block in show'
+  app/controllers/upload_files_controller.rb:15:in `show'
+
+
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.8ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.4ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (181.0ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (269.5ms)
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book" for 127.0.0.1 at 2016-10-01 14:15:39 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book", "id"=>"4"}
+  [1m[35mUploadFile Load (0.1ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/home/harry/railsworkspace/test_project/app/views/upload_files/show_file.html.erb:1: syntax error, unexpected tLABEL, expecting keyword_end
+...  form_for(@upload_file) methd: "get" do |f| @output_buffer....
+...                               ^
+/home/harry/railsworkspace/test_project/app/views/upload_files/show_file.html.erb:1: syntax error, unexpected keyword_do, expecting keyword_end
+...r(@upload_file) methd: "get" do |f| @output_buffer.safe_appe...
+...                               ^
+/home/harry/railsworkspace/test_project/app/views/upload_files/show_file.html.erb:8: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/upload_files/show_file.html.erb:1: syntax error, unexpected tLABEL, expecting keyword_end
+  app/views/upload_files/show_file.html.erb:1: syntax error, unexpected keyword_do, expecting keyword_end
+  app/views/upload_files/show_file.html.erb:8: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/controllers/upload_files_controller.rb:34:in `block (2 levels) in show'
+  app/controllers/upload_files_controller.rb:17:in `block in show'
+  app/controllers/upload_files_controller.rb:15:in `show'
+
+
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.1ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.2ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.4ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (23.0ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (45.3ms)
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book[1]" for 127.0.0.1 at 2016-10-01 14:20:53 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book[1]", "id"=>"4"}
+  [1m[35mUploadFile Load (0.2ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 829ms (Views: 635.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/upload_files/" for 127.0.0.1 at 2016-10-01 14:24:46 +0530
+Processing by UploadFilesController#index as HTML
+  [1m[36mUploadFile Load (0.3ms)[0m  [1mSELECT "upload_files".* FROM "upload_files"[0m
+  Rendered upload_files/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/upload_files/4" for 127.0.0.1 at 2016-10-01 14:24:51 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUploadFile Load (0.2ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/upload_files/4" for 127.0.0.1 at 2016-10-01 14:24:54 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUploadFile Load (0.2ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered upload_files/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/upload_files/4" for 127.0.0.1 at 2016-10-01 14:24:55 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUploadFile Load (0.1ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/upload_files/4" for 127.0.0.1 at 2016-10-01 14:25:21 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUploadFile Load (0.3ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered upload_files/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 38ms (Views: 31.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.self-1e1be218744ffc8b17e080e8c65d69006a0323894de7049c32cd53cec1df7727.css?body=1" for 127.0.0.1 at 2016-10-01 14:25:21 +0530
+
+
+Started GET "/assets/upload_files.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-01 14:25:21 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-01 14:25:21 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-01 14:25:21 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-01 14:25:21 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-01 14:25:21 +0530
+
+
+Started GET "/assets/upload_files.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-01 14:25:21 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-01 14:25:21 +0530
+
+
+Started GET "/upload_files/4" for 127.0.0.1 at 2016-10-01 14:25:25 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUploadFile Load (0.2ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 28ms (Views: 23.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/upload_filess" for 127.0.0.1 at 2016-10-01 14:25:43 +0530
+
+ActionController::RoutingError (No route matches [GET] "/upload_filess"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/harry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/harry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/harry/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (38.5ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (100.6ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (124.7ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (190.2ms)
+
+
+Started GET "/upload_files" for 127.0.0.1 at 2016-10-01 14:26:18 +0530
+Processing by UploadFilesController#index as HTML
+  [1m[36mUploadFile Load (0.8ms)[0m  [1mSELECT "upload_files".* FROM "upload_files"[0m
+  Rendered upload_files/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/upload_files/4" for 127.0.0.1 at 2016-10-01 14:26:22 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUploadFile Load (0.2ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 37ms (Views: 33.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/upload_files/4" for 127.0.0.1 at 2016-10-01 14:26:52 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUploadFile Load (0.1ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered upload_files/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 53ms (Views: 51.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.self-1e1be218744ffc8b17e080e8c65d69006a0323894de7049c32cd53cec1df7727.css?body=1" for 127.0.0.1 at 2016-10-01 14:26:52 +0530
+
+
+Started GET "/assets/upload_files.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-01 14:26:52 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-01 14:26:52 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-01 14:26:52 +0530
+
+
+Started GET "/assets/upload_files.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-01 14:26:52 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-01 14:26:52 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-01 14:26:52 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-01 14:26:52 +0530
+
+
+Started GET "/upload_files/4?file_name=test.xml" for 127.0.0.1 at 2016-10-01 14:26:54 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "id"=>"4"}
+  [1m[35mUploadFile Load (0.2ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 35ms (Views: 28.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/upload_files/4?file_name=test.xml" for 127.0.0.1 at 2016-10-01 14:28:23 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "id"=>"4"}
+  [1m[36mUploadFile Load (0.2ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 26ms (Views: 21.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-1e1be218744ffc8b17e080e8c65d69006a0323894de7049c32cd53cec1df7727.css?body=1" for 127.0.0.1 at 2016-10-01 14:28:23 +0530
+
+
+Started GET "/assets/upload_files.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-01 14:28:24 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-01 14:28:24 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-01 14:28:24 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-01 14:28:24 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-01 14:28:24 +0530
+
+
+Started GET "/assets/upload_files.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-01 14:28:24 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-01 14:28:24 +0530
+
+
+Started GET "/upload_files/4?file_name=test.xml" for 127.0.0.1 at 2016-10-01 14:28:50 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "id"=>"4"}
+  [1m[35mUploadFile Load (0.1ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 31ms (Views: 27.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.self-1e1be218744ffc8b17e080e8c65d69006a0323894de7049c32cd53cec1df7727.css?body=1" for 127.0.0.1 at 2016-10-01 14:28:50 +0530
+
+
+Started GET "/assets/upload_files.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-01 14:28:50 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-01 14:28:50 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-01 14:28:50 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-01 14:28:50 +0530
+
+
+Started GET "/assets/upload_files.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-01 14:28:50 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-01 14:28:50 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-01 14:28:50 +0530
+
+
+Started GET "/upload_files/4?file_name=test.xml" for 127.0.0.1 at 2016-10-01 14:30:14 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "id"=>"4"}
+  [1m[36mUploadFile Load (1.3ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 34ms (Views: 28.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/scaffolds.self-1e1be218744ffc8b17e080e8c65d69006a0323894de7049c32cd53cec1df7727.css?body=1" for 127.0.0.1 at 2016-10-01 14:30:15 +0530
+
+
+Started GET "/assets/upload_files.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-01 14:30:15 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-01 14:30:15 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-01 14:30:15 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-01 14:30:15 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-01 14:30:15 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-01 14:30:15 +0530
+
+
+Started GET "/assets/upload_files.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-01 14:30:15 +0530
+
+
+Started PATCH "/upload_files/4" for 127.0.0.1 at 2016-10-01 14:30:35 +0530
+Processing by UploadFilesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DFEe9kg0cVd+9tyskzFbJConWABMqoYI0agD7AHvMmhCnRoex0FmQD9emfe0tuItTC6GiSDsIoV4RiZs2DBzFg==", "filter"=>"/bookstore", "file_name"=>"test.xml", "id"=>"4"}
+  [1m[35mUploadFile Load (0.1ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.1ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: upload_file):
+  app/controllers/upload_files_controller.rb:97:in `upload_file_params'
+  app/controllers/upload_files_controller.rb:69:in `block in update'
+  app/controllers/upload_files_controller.rb:68:in `update'
+
+
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.5ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (21.9ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.3ms)
+  Rendered /home/harry/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (45.6ms)
+
+
+Started GET "/upload_files/4?file_name=test.xml" for 127.0.0.1 at 2016-10-01 14:31:08 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "id"=>"4"}
+  [1m[36mUploadFile Load (0.2ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 30ms (Views: 25.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-1e1be218744ffc8b17e080e8c65d69006a0323894de7049c32cd53cec1df7727.css?body=1" for 127.0.0.1 at 2016-10-01 14:31:08 +0530
+
+
+Started GET "/assets/upload_files.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-01 14:31:08 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-01 14:31:08 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-01 14:31:08 +0530
+
+
+Started GET "/assets/upload_files.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-01 14:31:08 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-01 14:31:08 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-01 14:31:08 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-01 14:31:08 +0530
+
+
+Started GET "/upload_files/4?utf8=%E2%9C%93&filter=%2Fbookstore&file_name=test.xml" for 127.0.0.1 at 2016-10-01 14:31:12 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"utf8"=>"✓", "filter"=>"/bookstore", "file_name"=>"test.xml", "id"=>"4"}
+  [1m[35mUploadFile Load (0.2ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 26ms (Views: 21.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/upload_files/4?utf8=%E2%9C%93&filter=%2Fbookstore&file_name=test.xml" for 127.0.0.1 at 2016-10-01 14:31:54 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"utf8"=>"✓", "filter"=>"/bookstore", "file_name"=>"test.xml", "id"=>"4"}
+  [1m[36mUploadFile Load (0.2ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 39ms (Views: 33.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-01 14:31:55 +0530
+
+
+Started GET "/assets/scaffolds.self-1e1be218744ffc8b17e080e8c65d69006a0323894de7049c32cd53cec1df7727.css?body=1" for 127.0.0.1 at 2016-10-01 14:31:55 +0530
+
+
+Started GET "/assets/upload_files.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-01 14:31:55 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-01 14:31:55 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-01 14:31:55 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-01 14:31:55 +0530
+
+
+Started GET "/assets/upload_files.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-01 14:31:55 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-01 14:31:55 +0530
+
+
+Started GET "/upload_files/4?utf8=%E2%9C%93&filter=%2Fbookstore%2Fbook&file_name=test.xml" for 127.0.0.1 at 2016-10-01 14:32:09 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"utf8"=>"✓", "filter"=>"/bookstore/book", "file_name"=>"test.xml", "id"=>"4"}
+  [1m[35mUploadFile Load (0.1ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 32ms (Views: 28.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book[1]" for 127.0.0.1 at 2016-10-01 14:48:47 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book[1]", "id"=>"4"}
+  [1m[36mUploadFile Load (0.3ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 31ms (Views: 17.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/scaffolds.self-1e1be218744ffc8b17e080e8c65d69006a0323894de7049c32cd53cec1df7727.css?body=1" for 127.0.0.1 at 2016-10-01 14:48:47 +0530
+
+
+Started GET "/assets/upload_files.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-01 14:48:47 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-01 14:48:47 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-01 14:48:47 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-01 14:48:47 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-01 14:48:47 +0530
+
+
+Started GET "/assets/upload_files.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-01 14:48:47 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-01 14:48:47 +0530
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book[1]" for 127.0.0.1 at 2016-10-01 14:48:55 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book[1]", "id"=>"4"}
+  [1m[35mUploadFile Load (0.1ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 30ms (Views: 25.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.self-1e1be218744ffc8b17e080e8c65d69006a0323894de7049c32cd53cec1df7727.css?body=1" for 127.0.0.1 at 2016-10-01 14:48:55 +0530
+
+
+Started GET "/assets/upload_files.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-01 14:48:55 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-01 14:48:55 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-01 14:48:55 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-01 14:48:55 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-01 14:48:55 +0530
+
+
+Started GET "/assets/upload_files.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-01 14:48:55 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-01 14:48:55 +0530
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book" for 127.0.0.1 at 2016-10-01 14:48:59 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book", "id"=>"4"}
+  [1m[36mUploadFile Load (0.1ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 24ms (Views: 20.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book" for 127.0.0.1 at 2016-10-01 14:50:03 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book", "id"=>"4"}
+  [1m[35mUploadFile Load (0.2ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 33ms (Views: 19.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/scaffolds.self-1e1be218744ffc8b17e080e8c65d69006a0323894de7049c32cd53cec1df7727.css?body=1" for 127.0.0.1 at 2016-10-01 14:50:03 +0530
+
+
+Started GET "/assets/upload_files.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-01 14:50:03 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-01 14:50:03 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-01 14:50:03 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-01 14:50:03 +0530
+
+
+Started GET "/assets/upload_files.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-01 14:50:04 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-01 14:50:04 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-01 14:50:04 +0530
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book" for 127.0.0.1 at 2016-10-01 14:50:05 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book", "id"=>"4"}
+  [1m[36mUploadFile Load (0.1ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 18.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.self-1e1be218744ffc8b17e080e8c65d69006a0323894de7049c32cd53cec1df7727.css?body=1" for 127.0.0.1 at 2016-10-01 14:50:05 +0530
+
+
+Started GET "/assets/upload_files.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-01 14:50:05 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-01 14:50:05 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-01 14:50:05 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-01 14:50:05 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-01 14:50:05 +0530
+
+
+Started GET "/assets/upload_files.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-01 14:50:05 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-01 14:50:05 +0530
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book" for 127.0.0.1 at 2016-10-01 14:50:06 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book", "id"=>"4"}
+  [1m[35mUploadFile Load (0.2ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 23ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-1e1be218744ffc8b17e080e8c65d69006a0323894de7049c32cd53cec1df7727.css?body=1" for 127.0.0.1 at 2016-10-01 14:50:07 +0530
+
+
+Started GET "/assets/upload_files.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-01 14:50:07 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-01 14:50:07 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-01 14:50:07 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-01 14:50:07 +0530
+
+
+Started GET "/assets/upload_files.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-01 14:50:07 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-01 14:50:07 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-01 14:50:07 +0530
+
+
+Started GET "/upload_files/4?file_name=test.xml&filter=/bookstore/book[1]" for 127.0.0.1 at 2016-10-01 14:50:11 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "filter"=>"/bookstore/book[1]", "id"=>"4"}
+  [1m[36mUploadFile Load (0.2ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 43ms (Views: 38.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/upload_files" for 127.0.0.1 at 2016-10-01 14:50:33 +0530
+Processing by UploadFilesController#index as HTML
+  [1m[35mUploadFile Load (0.2ms)[0m  SELECT "upload_files".* FROM "upload_files"
+  Rendered upload_files/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/upload_files/4" for 127.0.0.1 at 2016-10-01 14:50:36 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUploadFile Load (0.2ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered upload_files/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 28ms (Views: 24.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/upload_files/4?file_name=test.xml" for 127.0.0.1 at 2016-10-01 14:50:38 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"file_name"=>"test.xml", "id"=>"4"}
+  [1m[35mUploadFile Load (0.1ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 22ms (Views: 18.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/upload_files/4?utf8=%E2%9C%93&filter=%2Fbookstore%2Fbook%5B1%5D&file_name=test.xml" for 127.0.0.1 at 2016-10-01 14:50:43 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"utf8"=>"✓", "filter"=>"/bookstore/book[1]", "file_name"=>"test.xml", "id"=>"4"}
+  [1m[36mUploadFile Load (0.2ms)[0m  [1mSELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 18.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/upload_files/4?utf8=%E2%9C%93&filter=%2Fbookstore%2Fbook&file_name=test.xml" for 127.0.0.1 at 2016-10-01 14:50:47 +0530
+Processing by UploadFilesController#show as HTML
+  Parameters: {"utf8"=>"✓", "filter"=>"/bookstore/book", "file_name"=>"test.xml", "id"=>"4"}
+  [1m[35mUploadFile Load (0.2ms)[0m  SELECT  "upload_files".* FROM "upload_files" WHERE "upload_files"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered upload_files/show_file.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 31ms (Views: 26.4ms | ActiveRecord: 0.2ms)

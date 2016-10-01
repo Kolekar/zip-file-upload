@@ -3,7 +3,7 @@
 <p>
   <strong>Zip file a:</strong><br>
   <% @xml_file_names.each do |name| %>
-  <%= name %><br>
+  <%= link_to name, upload_file_path(@upload_file, file_name: name) %><br>
   <%end%>
 </p>
 

@@ -11,13 +11,9 @@ class UploadFilesController < ApplicationController
   # GET /upload_files/1.json
   def show
     @xml_file_names = []
-    Zip::File.open(@upload_file.zip_file_a.path) do |zip_file|
-      # Handle entries one by one 
-      zip_file.each do |entry|
-        # Extract to file/directory/symlink
-        @xml_file_names << entry.name if (entry.name =~ /.xml$/).present?
-      end
-    end
+    @content = []
+    parse_zip
+    render 'show_file' if params[:file_name]
   end
 
   # GET /upload_files/new
@@ -70,13 +66,36 @@ class UploadFilesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_upload_file
-      @upload_file = UploadFile.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def upload_file_params
-      params.require(:upload_file).permit(:zip_file_a)
+  # Use callbacks to share common setup or constraints between actions.
+  def set_upload_file
+    @upload_file = UploadFile.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def upload_file_params
+    params.require(:upload_file).permit(:zip_file_a)
+  end
+
+  def parse_zip
+    Zip::File.open(@upload_file.zip_file_a.path) do |zip_file|
+      # Handle entries one by one
+      zip_file.each do |entry|
+        # Extract to file/directory/symlink
+        @xml_file_names << entry.name if (entry.name =~ /.xml$/).present?
+        if params[:file_name] && params[:file_name] == entry.name
+          @content << entry.get_input_stream.read && break if params[:filter].blank?
+          parse_xml_string(entry) && break
+        end
+      end
     end
+  end
+
+  def parse_xml_string(entry)
+    doc = Nokogiri::XML.parse(entry.get_input_stream.read)
+    results = doc.xpath(params[:filter])
+    results.map do |x|
+      @content << x.to_s
+    end
+  end
 end
