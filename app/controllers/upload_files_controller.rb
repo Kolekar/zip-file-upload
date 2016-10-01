@@ -89,6 +89,8 @@ class UploadFilesController < ApplicationController
         end
       end
     end
+  rescue
+    flash[:notice] = 'Can not read zip file.'
   end
 
   def parse_xml_string(entry)
@@ -97,5 +99,7 @@ class UploadFilesController < ApplicationController
     results.map do |x|
       @content << x.to_s
     end
+  rescue
+    flash[:notice] = 'X-path are not correct.'
   end
 end
